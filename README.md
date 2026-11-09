@@ -1,4 +1,4 @@
-# Replication package
+Replication package
 
 Logged flight traces and the analysis that produces the numbers reported in
 the paper.
@@ -8,37 +8,29 @@ Lighthouse setup. **The analysis does not.** Every table in the paper is
 recomputed here from the traces in `data/`, with no hardware and no network
 access.
 
-## Running it
+ Running it:
+ 
 
-```
+
 pip install numpy pandas jupyter
 jupyter notebook reproduce.ipynb     
-```
 
 
-```
+
+
 
 `reproduce.ipynb` is shipped with its outputs so the results can be read without running anything.
 
-## What produces what
 
-| Notebook section | Paper |
-|---|---|
-| Admission | Section V-D, and the flight counts in Section V-B |
-| Table I | conformance verdict per mission |
-| Table II | robustness of the square band |
-| Table III | fault-injection campaign |
-| Admission in practice | Section VI-E |
+ Data
 
-## Data
 
-```
 data/physical/square/              square mission, measurement batch
 data/physical/excitation/          excitation mission, all flights flown
 data/physical/square_relocalised/  square traces rejected on plausibility
 data/physical/handover/            vehicle-replacement runs + faults
 data/twin/                         traces produced by the digital twin
-```
+
 
 One CSV per flight, 50 Hz. Columns: `t_mission` (s, from takeoff), `x y z`
 (m, Lighthouse frame), `yaw`, `vx vy vz`, `vbat` (V), `sp_x sp_y sp_z sp_yaw`
