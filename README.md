@@ -13,6 +13,7 @@ access.
 
 
 pip install numpy pandas jupyter
+
 jupyter notebook reproduce.ipynb     
 
 
